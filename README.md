@@ -1,3 +1,5 @@
+![Architecture Diagram](./Pipeline Architecture.pdf)
+
 # End-to-End Data Pipeline Using Azure Data Factory
 ## Overview
 
