@@ -1,42 +1,36 @@
-# azure-data-pipeline
-End-to-end Azure Data Factory pipeline project
-Overview
+
+# End-to-end Azure Data Factory pipeline project
+# Overview
 
 This project demonstrates an end-to-end automated data pipeline built using Azure Data Factory (ADF). The pipeline is designed to handle structured data ingestion, validation, transformation, and storage for analytics and reporting purposes.
 
 It simulates a real-world data engineering workflow where files are automatically processed from a landing zone into a SQL database and made available for visualization through Power BI.
 
-Architecture Overview
+# Architecture Overview
 
 The pipeline follows a modular and event-driven architecture:
 
-Landing Zone (Azure Blob Storage): Entry point for all uploaded files
-ADF Event Trigger: Automatically triggers pipeline on file upload
-Metadata Validation Layer: Checks file structure and schema
-Processing Layer: Handles transformation, conversion, and routing
-Storage Layer: Loads cleaned data into Azure SQL Database
-Reporting Layer: Power BI dashboards for analytics
-Archive & Rejected Zones: Stores original processed files and invalid datasets
-Pipeline Workflow
+i.Landing Zone (Azure Blob Storage): Entry point for all uploaded files
+ii.ADF Event Trigger: Automatically triggers pipeline on file upload
+iii.Metadata Validation Layer: Checks file structure and schema
+iv.Processing Layer: Handles transformation, conversion, and routing
+v.Storage Layer: Loads cleaned data into Azure SQL Database
+vi.Reporting Layer: Power BI dashboards for analytics
+vii.Archive & Rejected Zones: Stores original processed files and invalid datasets
+# Pipeline Workflow
 1. File Ingestion
-
 Files are uploaded to the Landing folder, which triggers the pipeline using an event-based trigger.
 
 2. Metadata Extraction
-
 A Get Metadata (GetFileList) activity retrieves all incoming files. Each file is processed individually using a ForEach activity.
 
 3. Schema Validation
-
 A second metadata check (GetFileStructure) validates:
-
 Required columns
 File format (CSV or Excel)
 Schema consistency
 4. File Routing (Switch Activity)
-
 Based on validation:
-
 Valid CSV Files
 Sent directly to Data Flow
 Transformed and loaded into SQL Database
@@ -50,9 +44,7 @@ Invalid Files
 Moved to Rejected Folder
 Removed from landing zone
 5. Data Transformation
-
 Azure Data Flows are used to:
-
 Clean and standardize data
 Handle data type conversions
 Remove invalid or null records
@@ -61,9 +53,7 @@ Map data to SQL schema
 Cleaned data is stored in Azure SQL Database
 Power BI connects directly to SQL for dashboards and insights
 7. Archiving
-
 All successfully processed files are archived to maintain:
-
 Data lineage
 Auditability
 Historical tracking
@@ -80,3 +70,16 @@ Dynamic schema validation
 Scalable ETL architecture
 Built-in error handling and file rejection system
 End-to-end data lineage and archiving
+
+# Learning Outcomes
+This project strengthened practical skills in:
+Cloud-based ETL pipeline design
+Data orchestration using Azure Data Factory
+Serverless compute with Azure Functions
+Data validation and transformation techniques
+End-to-end data engineering workflow design
+Author
+
+Asmau Abdulkarim
+Data Analyst | Aspiring Data Engineer
+
