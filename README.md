@@ -91,9 +91,13 @@ iii.Invalid Files
  Remove invalid or null records
  
  Map data to SQL schema
+ 
 6. Storage & Reporting
+
 Cleaned data is stored in Azure SQL Database
+
 Power BI connects directly to SQL for dashboards and insights
+
 7. Archiving
 
  All successfully processed files are archived to maintain:
@@ -119,14 +123,22 @@ Power BI
 
 
 # Learning Outcomes
+
 This project strengthened practical skills in:
+
 Cloud-based ETL pipeline design
+
 Data orchestration using Azure Data Factory
+
 Serverless compute with Azure Functions
+
 Data validation and transformation techniques
+
 End-to-end data engineering workflow design
+
 Author
 
 Asmau Abdulkarim
+
 Data Analyst | Aspiring Data Engineer
 
